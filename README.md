@@ -33,15 +33,18 @@ NewMind/
 
 ## 🚀 Özellikler
 
-### 🔍 Yorum Sınıflandırması
-
-* Gelişmiş **BART-MNLI modeli** ile kullanıcı yorumları otomatik olarak **Claim, Evidence, Counterclaim veya Rebuttal** olarak etiketlenir.
-* Akademik düzeyde argüman madenciliği, tek bir tıkla kullanımda!
 
 ### 🧠 Konu Eşleştirmesi (Semantic Matching)
 
 * **SentenceTransformer** kullanılarak her yorum, en uygun konuyla eşleştirilir.
 * Sıradan embedding’ler yerine yüksek doğruluk sağlayan cümle benzerliği yaklaşımı.
+
+  
+### 🔍 Yorum Sınıflandırması
+
+* Gelişmiş **BART-MNLI modeli** ile kullanıcı yorumları otomatik olarak **Claim, Evidence, Counterclaim veya Rebuttal** olarak etiketlenir.
+* Akademik düzeyde argüman madenciliği, tek bir tıkla kullanımda!
+
 
 ### ✨ Otomatik Özetleme
 
