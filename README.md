@@ -21,23 +21,23 @@ socialmedia_analyzer/
 
 ## 🚀 Özellikler
 
-- 🔍 **Yorum Sınıflandırması:**  
+### 🔍 Yorum Sınıflandırması:
   Gelişmiş BART-MNLI modeliyle her yorumu otomatik olarak **Claim**, **Evidence**, **Counterclaim** veya **Rebuttal** olarak etiketler.  
   Akademik düzeyde argüman madenciliği, sadece bir tık uzağında!
 
-- 🧠 **Konu Eşleştirmesi (Semantic Matching):**  
+### 🧠 Konu Eşleştirmesi (Semantic Matching):
   Kullanıcının yorumunu, önceden tanımlı konularla yüksek doğrulukla eşleştirir.  
   Bunu da SentenceTransformer ile yapar — çünkü sıradan embedding’ler bize göre değil. 😌
 
-- ✨ **Otomatik Özetleme:**  
+### ✨ Otomatik Özetleme:
   Flan-T5 modeliyle, kullanıcıların ilgilendiği konu hakkında anlamlı ve özlü bir **otomatik konu özeti** oluşturur.  
   Evet, kendi kendine yazıyor resmen!
 
-- 📊 **Grafik Gösterimi:**  
+### 📊 Grafik Gösterimi:
   Yapay zekâ tarafından sınıflandırılan yorumların dağılımını **anında** görselleştir.  
   Şık, renkli ve bilgilendirici matplotlib grafikler ile insight'lar gözünün önünde.
 
-- 💾 **Gerçek Zamanlı CSV Güncelleme:**  
+### 💾 Gerçek Zamanlı CSV Güncelleme: 
   Girilen her yeni yorum, `user_comments.csv` dosyasına anlık olarak yazılır.  
   Yani sadece analiz değil, aynı zamanda veri kaydı da full otomatik!
 
