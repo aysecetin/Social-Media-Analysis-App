@@ -65,7 +65,7 @@ NewMind/
 ### 1. Depoyu Klonla
 
 ```bash
-git clone https://github.com/aysecetin/Social-Media-Analyzer-App.git
+git clone https://github.com/aysecetin/Social-Media-Analysis-App.git
 cd Social-Media-Analyzer-App
 ```
 
