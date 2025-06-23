@@ -4,8 +4,8 @@ NewMind, sosyal medya platformlarında yapılan yorumları analiz eden, sınıfl
 
 ## 🎯 Projenin Amacı
 
-1. **Yorum Sınıflandırması:** Yapay zekâ ile her yorumu Claim, Evidence, Counterclaim veya Rebuttal olarak etiketlemek.
-2. **Konu Eşleştirmesi:** Yorumları önceden tanımlanmış konularla eşleştirmek.
+1. **Konu Eşleştirmesi:** Yorumları önceden tanımlanmış konularla eşleştirmek.
+2. **Yorum Sınıflandırması:** Yapay zekâ ile her yorumu Claim, Evidence, Counterclaim veya Rebuttal olarak etiketlemek.
 3. **Konu Özeti Üretimi:** Girilen konuya dair tüm yorumlardan akıllı bir özet çıkarmak.
 4. **Görsel Analiz:** Yorum türlerinin dağılımını grafikle sunmak.
 5. **Gerçek Zamanlı Veri Güncelleme:** Yeni yorumları anında CSV dosyasına kaydetmek.
