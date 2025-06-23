@@ -21,11 +21,25 @@ socialmedia_analyzer/
 
 ## 🚀 Özellikler
 
-- **Yorum Sınıflandırması:** Claim, Evidence, Counterclaim, Rebuttal (BART-MNLI ile)
-- **Konu Eşleştirmesi:** Yorumun en yakın konuyla eşleşmesi (SentenceTransformer)
-- **Otomatik Özetleme:** Flan-T5 ile konu bazlı akıllı özet üretimi
-- **Grafik Gösterimi:** Yorum türlerine göre dağılım grafiği (Matplotlib)
-- **CSV Güncelleme:** Kullanıcı yorumları `user_comments.csv` dosyasına yazılır
+- 🔍 **Yorum Sınıflandırması:**  
+  Gelişmiş BART-MNLI modeliyle her yorumu otomatik olarak **Claim**, **Evidence**, **Counterclaim** veya **Rebuttal** olarak etiketler.  
+  Akademik düzeyde argüman madenciliği, sadece bir tık uzağında!
+
+- 🧠 **Konu Eşleştirmesi (Semantic Matching):**  
+  Kullanıcının yorumunu, önceden tanımlı konularla yüksek doğrulukla eşleştirir.  
+  Bunu da SentenceTransformer ile yapar — çünkü sıradan embedding’ler bize göre değil. 😌
+
+- ✨ **Otomatik Özetleme:**  
+  Flan-T5 modeliyle, kullanıcıların ilgilendiği konu hakkında anlamlı ve özlü bir **otomatik konu özeti** oluşturur.  
+  Evet, kendi kendine yazıyor resmen!
+
+- 📊 **Grafik Gösterimi:**  
+  Yapay zekâ tarafından sınıflandırılan yorumların dağılımını **anında** görselleştir.  
+  Şık, renkli ve bilgilendirici matplotlib grafikler ile insight'lar gözünün önünde.
+
+- 💾 **Gerçek Zamanlı CSV Güncelleme:**  
+  Girilen her yeni yorum, `user_comments.csv` dosyasına anlık olarak yazılır.  
+  Yani sadece analiz değil, aynı zamanda veri kaydı da full otomatik!
 
 
 ## 🖥 Arayüz Ekranı
@@ -33,9 +47,13 @@ socialmedia_analyzer/
 Uygulamanın arayüzü aşağıdaki bileşenleri içerir:
 
 - Yorum Ekle sekmesi
+
+![Yorum Ekle Ekranı](assets/yorum ekle.png)
 - Konu Analizi sekmesi
+
+![Konu Analizi Ekranı](assets/konu analizi.png)
+
 - Otomatik konu özeti
 - Yorum türü dağılım grafiği
 
-Görseller için: `docs/` klasörüne göz atabilirsin.
 
