@@ -48,10 +48,10 @@ Uygulamanın arayüzü aşağıdaki bileşenleri içerir:
 
 - Yorum Ekle sekmesi
 
-![Yorum Ekle Ekranı](assets/yorum ekle.png)
+![Yorum Ekle Ekranı](assets/yorum-ekle.png)
 - Konu Analizi sekmesi
 
-![Konu Analizi Ekranı](assets/konu analizi.png)
+![Konu Analizi Ekranı](assets/konu-analizi.png)
 
 - Otomatik konu özeti
 - Yorum türü dağılım grafiği
