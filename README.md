@@ -65,8 +65,8 @@ NewMind/
 ### 1. Depoyu Klonla
 
 ```bash
-git clone https://github.com/kullaniciadi/NewMind.git
-cd NewMind
+git clone https://github.com/aysecetin/Social-Media-Analyzer-App.git
+cd Social-Media-Analyzer-App
 ```
 
 ### 2. Gerekli Paketleri Yükle
