@@ -19,31 +19,51 @@ socialmedia_analyzer/
 │   └── topics.csv
 ```
 
-## 🚀 Özellikler
+## 📏 Genel Bakış
 
-### 🔍 Yorum Sınıflandırması:
-  Kullanıcı yorumları, gelişmiş BART-MNLI modeli ile otomatik olarak dört kategoriye ayrılır:
-  Claim, Evidence, Counterclaim ve Rebuttal.
-  Bu sayede argümantatif analizler akademik doğrulukla yapılabilir.
+**Sosyal Medya Analizatörü**, sosyal medya üzerindeki kullanıcı yorumlarını analiz etmeye yönelik, kullanıcı dostu bir Gradio tabanlı web uygulamasıdır.
+Bu uygulama, yorumların sınıflandırılması, ilgili konularla eşleştirilmesi ve konu bazlı özetlerin üretilmesini sağlayarak, sosyal medya metinlerinden anlamlı içgörüler elde etmeye yardımcı olur.
 
-### 🧠 Konu Eşleştirmesi (Semantic Matching):
-  Girilen her yorum, SentenceTransformer tabanlı bir embedding modeli ile analiz edilir ve en uygun konuyla eşleştirilir.
-  Bu, basit anahtar kelime eşleşmesinin ötesinde, bağlamsal anlamı yakalayan semantik bir eşleştirmedir.
+### Temel Yetenekler:
 
-
-### ✨ Otomatik Özetleme:
-  Yorumlara ait içerikler, kullanıcı odaklı Flan-T5 dil modeli ile özetlenir.
-  Sonuç: İlgili konu başlığına dair kısa, anlamlı ve bağlama uygun otomatik bir özet.
-
-### 📊 Grafik Gösterimi:
-  Yorumların sınıflandırma sonuçları, Matplotlib ile kategorilere göre anlık olarak görselleştirilir.
-  Kullanıcı dostu ve bilgilendirici grafikler ile analiz sonuçları kolayca yorumlanabilir.
+* Kullanıcı yorumlarını veri setine kolayca ekleme
+* Yorumları argüman türlerine göre sınıflandırma
+* Konularla anlamsal olarak eşleşen yorumları bulma
+* Flan-T5 ile konu özeti üretme
+* Görsel analiz ve grafiksel yorum tipi dağılımı
+* Yeni yorumları otomatik olarak CSV’ye kaydetme
 
 
-### 💾 Gerçek Zamanlı CSV Güncelleme: 
-  Kullanıcı tarafından girilen her yorum, user_comments.csv dosyasına otomatik olarak kaydedilir.
-  Sistem, hem analiz yapar hem de sürekli güncellenen bir veri kümesi oluşturur.
+## 🛠️ Özellikler
 
+### 📝 Yorum Ekleme
+
+Kullanıcılar, sistem arayüzü üzerinden yorumlarını doğrudan ekleyebilir. Her yeni yorum, veri setine anlık olarak entegre edilir.
+
+### 🔎 Konu Analizi
+
+Kullanıcı ister yeni bir konu belirleyebilir, ister mevcut konular arasında seçim yaparak ilgili yorumları analiz edebilir.
+
+### 🧠 Anlamsal Eşleştirme
+
+Yorumlar, **SentenceTransformer** ile vektörel olarak dönüştürülür ve semantik benzerlik hesaplanarak en uygun konularla eşleştirilir.
+
+### 🧬 Argüman Sınıflandırması
+
+Yorumlar, **BART-MNLI** modeli (veya dilersen Gemini API) ile aşağıdaki argüman türlerine ayrılır:
+`Claim`, `Counterclaim`, `Rebuttal`, `Evidence`.
+
+### ✨ Otomatik Özetleme
+
+İlgili yorumlardan elde edilen içerikler, **Flan-T5** modeli kullanılarak özlü ve bağlama uygun konu özetlerine dönüştürülür.
+
+### 📊 Görselleştirme
+
+Analiz edilen yorumların dağılımı, Matplotlib destekli interaktif grafiklerle görselleştirilir.
+
+### 💾 CSV Güncelleme
+
+Yeni girilen her yorum, sistem tarafından anında **`user_comments.csv`** dosyasına kaydedilir. Bu sayede veri seti canlı şekilde büyür.
 
 
 
