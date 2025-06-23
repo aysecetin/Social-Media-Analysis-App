@@ -1,6 +1,6 @@
 # ✨📊 NewMind - Sosyal Medya Görüş Analizi
 
-NewMind, sosyal medya platformlarında yapılan yorumları analiz eden, sınıflandıran ve konu bazlı çıkarımlar yapan bir yapay zekâ destekli analiz sistemidir. Bu proje; argüman madenciliği, konu eşleştirmesi, özetleme ve görselleştirme süreçlerini entegre ederek güçlü bir analiz deneyimi sunmayı hedefler.
+Bu uygulama sosyal medya platformlarında yapılan yorumları analiz eden, sınıflandıran ve konu bazlı çıkarımlar yapan bir yapay zekâ destekli analiz sistemidir. Bu proje; argüman madenciliği, konu eşleştirmesi, özetleme ve görselleştirme süreçlerini entegre ederek güçlü bir analiz deneyimi sunmayı hedefler.
 
 ## 🎯 Projenin Amacı
 
