@@ -69,7 +69,7 @@ NewMind/
 
 ```bash
 git clone https://github.com/aysecetin/Social-Media-Analysis-App.git
-cd Social-Media-Analyzer-App
+cd Social-Media-Analysis-App
 ```
 
 ### 2. Gerekli Paketleri Yükle
