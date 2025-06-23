@@ -3,16 +3,20 @@
 Gradio tabanlı web uygulamasıyla sosyal medya yorumlarını analiz et, sınıflandır ve konu özetleri üret!
 
 ## 📂Klasör Yapısı
+
 ```
-socialmedia-analyzer/
+socialmedia_analyzer/
 ├── app.py
 ├── requirements.txt
 ├── README.md
-├── classified_opinions.csv
-├── conclusions.csv
-├── user_comments.csv
-└── docs/
-    └── screenshot.png
+├── assets/
+│   ├── konu analizi.png
+│   └── yorum ekle.png
+├── data/
+│   ├── classified_opinions.csv
+│   ├── conclusions.csv
+│   ├── opinions.csv
+│   └── topics.csv
 ```
 
 ## 🚀 Özellikler
