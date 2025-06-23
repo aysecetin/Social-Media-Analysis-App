@@ -1,9 +1,10 @@
 # 🧠 Social Media Analyzer
 
 Gradio tabanlı web uygulamasıyla sosyal medya yorumlarını analiz et, sınıflandır ve konu özetleri üret!
+
 ## 📂Klasör Yapısı
 ```
-newmind-analyzer/
+socialmedia-analyzer/
 ├── app.py
 ├── requirements.txt
 ├── README.md
