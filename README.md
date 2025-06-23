@@ -1,82 +1,112 @@
-# 🧠 Social Media Analyzer
+# ✨📊 NewMind - Sosyal Medya Görüş Analizi
 
-## 📂Klasör Yapısı
+NewMind, sosyal medya platformlarında yapılan yorumları analiz eden, sınıflandıran ve konu bazlı çıkarımlar yapan bir yapay zekâ destekli analiz sistemidir. Bu proje; argüman madenciliği, konu eşleştirmesi, özetleme ve görselleştirme süreçlerini entegre ederek güçlü bir analiz deneyimi sunmayı hedefler.
 
-```
-socialmedia_analyzer/
-├── app.py
-├── requirements.txt
-├── README.md
-├── assets/
-│   ├── konu analizi.png
-│   └── yorum ekle.png
+## 🎯 Projenin Amacı
+
+1. **Yorum Sınıflandırması:** Yapay zekâ ile her yorumu Claim, Evidence, Counterclaim veya Rebuttal olarak etiketlemek.
+2. **Konu Eşleştirmesi:** Yorumları önceden tanımlanmış konularla eşleştirmek.
+3. **Konu Özeti Üretimi:** Girilen konuya dair tüm yorumlardan akıllı bir özet çıkarmak.
+4. **Görsel Analiz:** Yorum türlerinin dağılımını grafikle sunmak.
+5. **Gerçek Zamanlı Veri Güncelleme:** Yeni yorumları anında CSV dosyasına kaydetmek.
+
+
+
+## 🗂️ Proje Yapısı
+
+```bash
+NewMind/
+├── app.py                      # Ana uygulama dosyası (Gradio arayüzü)
+├── requirements.txt            # Gerekli Python kütüphaneleri
+├── README.md                   # Proje tanıtımı ve kullanım rehberi
 ├── data/
-│   ├── classified_opinions.csv
-│   ├── conclusions.csv
-│   ├── opinions.csv
-│   └── topics.csv
+│   ├── opinions.csv            # Kullanıcı yorumlarının bulunduğu veri dosyası
+│   ├── topics.csv              # Tanımlı konular
+│   ├── conclusions.csv         # Oluşturulan özetler
+│   └── classified_opinions.csv# Sınıflandırılmış yorumlar
+├── assets/
+│   ├── konu analizi.png        # Arayüz görseli
+│   └── yorum ekle.png          # Arayüz görseli
 ```
 
-## 📏 Genel Bakış
+---
 
-**Sosyal Medya Analizatörü**, sosyal medya üzerindeki kullanıcı yorumlarını analiz etmeye yönelik, kullanıcı dostu bir Gradio tabanlı web uygulamasıdır.
-Bu uygulama, yorumların sınıflandırılması, ilgili konularla eşleştirilmesi ve konu bazlı özetlerin üretilmesini sağlayarak, sosyal medya metinlerinden anlamlı içgörüler elde etmeye yardımcı olur.
+## 🚀 Özellikler
 
-### Temel Yetenekler:
+### 🔍 Yorum Sınıflandırması
 
-* Kullanıcı yorumlarını veri setine kolayca ekleme
-* Yorumları argüman türlerine göre sınıflandırma
-* Konularla anlamsal olarak eşleşen yorumları bulma
-* Flan-T5 ile konu özeti üretme
-* Görsel analiz ve grafiksel yorum tipi dağılımı
-* Yeni yorumları otomatik olarak CSV’ye kaydetme
+* Gelişmiş **BART-MNLI modeli** ile kullanıcı yorumları otomatik olarak **Claim, Evidence, Counterclaim veya Rebuttal** olarak etiketlenir.
+* Akademik düzeyde argüman madenciliği, tek bir tıkla kullanımda!
 
+### 🧠 Konu Eşleştirmesi (Semantic Matching)
 
-## 🛠️ Özellikler
-
-### 📝 Yorum Ekleme
-
-Kullanıcılar, sistem arayüzü üzerinden yorumlarını doğrudan ekleyebilir. Her yeni yorum, veri setine anlık olarak entegre edilir.
-
-### 🔎 Konu Analizi
-
-Kullanıcı ister yeni bir konu belirleyebilir, ister mevcut konular arasında seçim yaparak ilgili yorumları analiz edebilir.
-
-### 🧠 Anlamsal Eşleştirme
-
-Yorumlar, **SentenceTransformer** ile vektörel olarak dönüştürülür ve semantik benzerlik hesaplanarak en uygun konularla eşleştirilir.
-
-### 🧬 Argüman Sınıflandırması
-
-Yorumlar, **BART-MNLI** modeli (veya dilersen Gemini API) ile aşağıdaki argüman türlerine ayrılır:
-`Claim`, `Counterclaim`, `Rebuttal`, `Evidence`.
+* **SentenceTransformer** kullanılarak her yorum, en uygun konuyla eşleştirilir.
+* Sıradan embedding’ler yerine yüksek doğruluk sağlayan cümle benzerliği yaklaşımı.
 
 ### ✨ Otomatik Özetleme
 
-İlgili yorumlardan elde edilen içerikler, **Flan-T5** modeli kullanılarak özlü ve bağlama uygun konu özetlerine dönüştürülür.
+* **Flan-T5** modeli ile analiz edilen konu hakkında otomatik bir özet oluşturulur.
+* Konu başlıklarına göre anlamlı, bağlamlı ve özlü metinler üretir.
 
-### 📊 Görselleştirme
+### 📊 Grafik Gösterimi
 
-Analiz edilen yorumların dağılımı, Matplotlib destekli interaktif grafiklerle görselleştirilir.
+* Matplotlib ile oluşturulan interaktif grafikler, yorum türlerinin dağılımını anında gösterir.
+* Görsellik + içgörü bir arada!
 
-### 💾 CSV Güncelleme
+### 💾 Gerçek Zamanlı CSV Güncelleme
 
-Yeni girilen her yorum, sistem tarafından anında **`user_comments.csv`** dosyasına kaydedilir. Bu sayede veri seti canlı şekilde büyür.
+* Kullanıcı tarafından girilen her yorum, otomatik olarak `user_comments.csv` dosyasına yazılır.
+* Hem analiz yapılır hem de veri kalıcılığı sağlanır.
 
 
 
-## 🖥 Arayüz Ekranı
+## 🌟 Kullanım Rehberi
 
-Uygulamanın arayüzü aşağıdaki bileşenleri içerir:
+### 1. Depoyu Klonla
 
-- Yorum Ekle sekmesi
+```bash
+git clone https://github.com/kullaniciadi/NewMind.git
+cd NewMind
+```
 
-![Yorum Ekle Ekranı](assets/yorum-ekle.png)
-- Konu Analizi sekmesi
+### 2. Gerekli Paketleri Yükle
 
-![Konu Analizi Ekranı](assets/konu-analizi.png)
+```bash
+pip install -r requirements.txt
+```
 
-- Otomatik konu özeti
-- Yorum türü dağılım grafiği
+### 3. Uygulamayı Başlat
+
+```bash
+python app.py
+```
+
+
+
+## 🖼️ Arayüz Görselleri
+
+### 1. Yorum Ekleme Paneli
+
+![Yorum Ekle](assets/yorum-ekle.png)
+
+### 2. Konu Analizi Paneli
+
+![Konu Analizi](assets/konu-analizi.png)
+
+
+
+## 📄 Lisans
+
+Bu proje MIT Lisansı altında sunulmaktadır.
+
+## 🤝 Katkı Sağlama
+
+Projeye katkıda bulunmak için:
+
+1. Fork'la.
+2. Yeni bir branch oluştur: `git checkout -b feature/HarikaOzellik`
+3. Commit yap: `git commit -m "Harika bir özellik eklendi"`
+4. Pushla: `git push origin feature/HarikaOzellik`
+5. Pull request gönder.
 
 
