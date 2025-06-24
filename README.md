@@ -17,6 +17,7 @@ Bu uygulama sosyal medya platformlarında yapılan yorumları analiz eden, sın�
 ```bash
 NewMind/
 ├── app.py                      # Ana uygulama dosyası (Gradio arayüzü)
+├── notebook.ipynb              # Kodların olduğu dosya
 ├── requirements.txt            # Gerekli Python kütüphaneleri
 ├── README.md                   # Proje tanıtımı ve kullanım rehberi
 ├── data/
